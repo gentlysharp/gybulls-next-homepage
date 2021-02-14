@@ -14,6 +14,7 @@ export default function Header() {
       { title:"SHOP", path:"/shop", subMenus:[] }
     ]
   )
+  
 
   return (
     <header className={styles.header}>
