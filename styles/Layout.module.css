@@ -1,0 +1,118 @@
+.header {
+  position: relative;
+  background: #000;
+  color: white;
+}
+
+.header__logo_wrap{
+  position:absolute;
+  top: 10;
+  left: 50%;
+  transform: translate(-40%,50%);
+}
+
+.header__logo {
+  width: 80px;
+  height:80px;
+}
+
+.header__upper_nav {
+  height: 50px;
+}
+
+.header__upper_nav_inner{
+  padding: 0.5rem;
+}
+
+/* 버튼 초기화 */
+.header__upper_nav_inner button {
+  border: 1px solid transparent;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  font-weight:400;
+  outline:none;
+  position: relative;
+  overflow: hidden; 
+  background-color: transparent;
+  font-size: 20px;
+  color: #fff;
+}
+
+/* 아이콘 및 블로그 이미지가 좌측으로 쳐져서 transform효과로 해결 */
+.header__upper_nav_img{
+  width: 25px;
+  transform: translate(-8%,10%);
+}
+.header__upper_nav_inner i{
+  width: 25px;
+  transform: translate(-10%,0%);
+}
+
+.header__upper_nav_inner li > div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  background: grey;
+  border-radius: 30px;
+  padding: 1px;
+}
+
+.header__upper_nav_inner li {
+  padding: 0.2rem;
+}
+
+
+.header__nav {
+  /* background-color: grey; */
+  height: 50%;
+  border-bottom: solid 3px #ffe500 ;
+}
+
+.header__nav ul{
+  display:flex;
+  align-items: flex-end;
+  background-color: #181818;
+  width: 100%;
+  height: 50px;
+
+}
+
+.header__nav li {
+  margin: auto;
+  
+  /* border: 1px solid #fff; */
+}
+
+/* .header__nav */
+
+/* 버튼의 크기를 키우기 위해 li과 a의 높이를 맞춤 */
+.header__nav li a {
+  display: flex;
+  padding: 0 10px;
+  text-align: center;
+  align-items: center;
+  height: 40px;
+  line-height: 20px;
+  width: 85%;
+  height: 50px;
+  font-size: 16px;
+  margin-top:auto;
+  font-weight: bold;
+}
+
+
+.header__upper_nav ul{
+  display:flex;
+  justify-content: flex-end;
+}
+
+
+
+.hero_section {
+  margin: auto;
+  width : 100%;
+  padding: 2rem;
+}
