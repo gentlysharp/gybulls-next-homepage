@@ -24,6 +24,12 @@
   padding: 0.5rem;
 }
 
+.header__btn {
+  display: none;
+  cursor: pointer;
+  font-size: 25px;
+}
+
 /* 버튼 초기화 */
 .header__upper_nav_inner button {
   border: 1px solid transparent;
@@ -82,11 +88,7 @@
 
 .header__nav li {
   margin: auto;
-  
-  /* border: 1px solid #fff; */
 }
-
-/* .header__nav */
 
 /* 버튼의 크기를 키우기 위해 li과 a의 높이를 맞춤 */
 .header__nav li a {
@@ -103,16 +105,77 @@
   font-weight: bold;
 }
 
-
 .header__upper_nav ul{
   display:flex;
   justify-content: flex-end;
 }
 
-
-
 .hero_section {
   margin: auto;
   width : 100%;
   padding: 2rem;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer_img {
+  width: 250px;
+}
+
+@media screen and (max-width: 639px) { 
+  .header {
+    width : 100%;
+  }
+
+  .header__upper_nav_inner,
+  .header__nav {
+    display: none;
+  }
+
+  .header__btn {
+    position: absolute;
+    top: 15%;
+    right: 3%;
+    display: block;
+  }
+
+  .header__logo {
+    width: 50px;
+    height: 50px;
+  }
+
+  .footer_img {
+    display: none;
+  }
+
+  .footer{
+    font-size: 15px;
+    padding:25px;
+  }
+
+  .header__dropdown {
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    background: #000;
+  }
+
+  .header__dropdown_menu {
+    padding: 5px 0 5px 10px;
+  }
+  
+  .header__dropdown__footer {
+    display: flex;
+    justify-content: center;
+    background: #181818;
+    font-size: 20px;
+  }
+
+  .header__dropdown__footer a {
+    padding: 10px;
+  }
 }

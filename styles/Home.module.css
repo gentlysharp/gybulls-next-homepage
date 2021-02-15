@@ -110,42 +110,18 @@
   color: #000000;
 }
 
-.academy {
+.text_btn_group {
   margin-top:15px;
   min-width: 250px;
 }
 
-.academy p {
+.text_btn_group p {
  display: flex;
  justify-content: center;
 }
 
-.academy button {
+.text_btn_group button {
   margin: 0.5rem;
-}
-
-.home__sponsor_content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.sponsor_img_card {
-  display: inline-block;
-  width: 20rem;
-  height: 20rem;
-  position: relative;
-  margin: 1rem;
-}
-
-.sponsor_img_card * {
-  border: 1px solid transparent;
-  border-radius: 20px;
-}
-
-.sponsor_img_card img {
-  width: 100%;
-  height: 99%;
 }
 
 .sponsor_img_card > div {
@@ -169,13 +145,124 @@
   padding: 0.9rem;
 }
 
-.home__sponsor_imgs {
+
+
+.home__card,
+.home__card_reverse
+{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 40px;
+  width: 100%;
+}
+
+.home__card_reverse {
+  flex-direction: row-reverse;
+}
+
+.home__card_img {
+  width: 400px;
+}
+
+.home__card_content {
+  margin: 20px;
+}
+
+.mobile_text_btn {
+  display: none;
+}
+
+.hidden_btn {
+  display: none;
+}
+
+.home__video_content {
+  width: 780px;
+  height: 540px;
+}
+
+.home__sns_card_group {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.home__sponsor_imgs img {
+.home__sns_card {
+  border-radius: 30px;
+  box-shadow: 2px 2px 2px 2px rgb(0, 0, 0,0.3);
+  width: 110px;
+  height: 110px;
+}
+
+.home__sponsor_group {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+
+.home__sponsor_img {
+  display: flex;
+  align-items: center;
   width: 10rem;
-  margin: auto;
+}
+
+@media screen and (max-width: 639px) { 
+  .home__card,
+  .home__card_reverse {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 25px 0; 
+  }
+
+  .content_title {
+    font-size: 25px;
+  }
+
+  .sub_title {
+    display: none;
+  }
+
+  .text_btn_group {
+    display: none;
+  }
+  
+  .home__card_content {
+    margin-bottom: 0;
+  }
+  .home__card_img {
+    width: 350px;
+    margin-bottom: 15px;
+  }
+  .mobile_text_btn {
+    display: block;
+  }
+
+  .home__video_content {
+    width: 400px;
+    height: 300px;
+  }
+
+  .home__sns_card_group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .home__sns_card {
+    width: 200px;
+    height: 200px;
+  }
+
+  .home__sponsor_group {
+    flex-direction: column;
+  }
+
+  .home__sponsor_img {
+    margin: 40px;
+  }
 }
