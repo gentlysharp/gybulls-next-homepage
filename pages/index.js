@@ -136,10 +136,10 @@ export default function Home() {
                   className="m-2 "
                 >
                   <a href={insta.href}>
-                  <img 
-                        className={styles.home__sns_card}
-                        src={insta.img}
-                      />
+                    <img 
+                      className={styles.home__sns_card}
+                      src={insta.img}
+                    />
                   </a>
                 </li>
               )}

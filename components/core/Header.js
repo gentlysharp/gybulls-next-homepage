@@ -26,12 +26,12 @@ export default function Header() {
   ])
 
   const toggleMenu = () => {
-    setToggle(!toggle)
+    setToggle(!toggle);
   }
 
   return (
     <header className={styles.header}>
-      <div className={styles.header__btn} onClick={() => toggleMenu()}>
+      <div className={styles.header__sm_btn} onClick={() => toggleMenu()}>
         { toggle 
           ? <div>
               <i className="fas fa-bars"></i>
@@ -43,13 +43,15 @@ export default function Header() {
       </div>
 
       { !toggle
-         &&  <div className={styles.header__dropdown}>
+         &&  <div className={styles.header__sm_dropdown}>
               <ul>
-                {menus.map((menu,i) => 
-                  <li key={"menu" + i} className={styles.header__dropdown_menu}>
-                    <Link href={menu.path}>{menu.title}</Link>
-                  </li>
-                )}
+                {
+                  menus.map((menu,i) => 
+                    <li key={"menu" + i} className={styles.header__dropdown_menu}>
+                      <Link href={menu.path}>{menu.title}</Link>
+                    </li>
+                  )
+                }
               </ul>
       
               <div className={styles.header__dropdown__footer}> 
@@ -70,7 +72,6 @@ export default function Header() {
               </div>
             </div>
       }
-     
 
       <div className={styles.header__logo_wrap}>
         <Link href="/">
