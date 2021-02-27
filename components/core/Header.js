@@ -21,7 +21,7 @@ export default function Header() {
   const [icons, setIcons] = useState([
     { href:"#", name:"fab fa-instagram" },
     { href:"#", name:"fab fa-facebook-f" },
-    { href:"#", name:"", src:"/images/naver_blog.png" },
+    { href:"#", name:"", src:"/images/index/naver_blog.png" },
     { href:"#", name:"fab fa-instagram" },
   ])
 
@@ -76,7 +76,7 @@ export default function Header() {
       <div className={styles.header__logo_wrap}>
         <Link href="/">
           <a href="/">
-            <img className={styles.header__logo} src="/images/logo.png"></img>
+            <img className={styles.header__logo} src="/images/index/logo.png"></img>
           </a>
         </Link>
       </div>

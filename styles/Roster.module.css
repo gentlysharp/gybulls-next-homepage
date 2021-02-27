@@ -1,0 +1,54 @@
+.img_group {
+  display: flex;
+  flex-direction:column;
+  margin: 1.5rem 0;
+}
+
+.img_group h3 {
+  margin-left: 1rem;
+  padding: 0.3rem 0.5rem;
+  background: #000;
+  color: var(--bulls-yellow);
+  width: 8rem;
+  font-size: 20px;
+  font-weight: bold;
+  position:relative;
+  text-indent: 5px;
+  /* panel을 뒤로 보내기 위해 부모인 h3를 먼저 z-index를 1 높힌다. 이렇게 하지 않으면 뒷배경 보다 자식의 z-index가 뒤로 가버리기 때문에 보이지 않게 된다. */
+  z-index: 1; 
+}
+
+.img_group_title_panel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  transform: skew(45deg) translate(30%);
+  z-index: -1;
+  border-right: 0.8rem solid var(--bulls-yellow);
+  
+}
+
+.img_card {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 1.5rem;
+  margin-right:1rem;
+}
+
+.img_card img {
+  margin: 1rem;
+  width:260px;
+  border: 1px solid #000;
+  border-radius: 20px 0 20px 0;
+}
+
+.horizontal_line {
+  width:96%;
+  padding:2px;
+  margin: 0 0 2rem 1rem;
+  background: #d6d6d6;
+  opacity: 0.5;
+}

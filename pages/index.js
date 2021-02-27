@@ -11,25 +11,23 @@ export default function Home({instagramPosts}) {
   console.log("",instagramPosts);
 
   const [bullsInstagram,setBullsInstagram] = useState([
-    {img:"/images/home-img-03.jpg", href:"#"},
-    {img:"/images/home-img-02.jpg", href:"#"},
-    // {img:"/images/home-img-01.jpg", href:"#"},
-    // {img:"/images/home-img-03.jpg", href:"#"},
+    {img:"/images/index/home-img-03.jpg", href:"#"},
+    {img:"/images/index/home-img-02.jpg", href:"#"},
+    // {img:"/images/index/home-img-01.jpg", href:"#"},
+    // {img:"/images/index/home-img-03.jpg", href:"#"},
   ]);
 
   const [academyInstagram,setAcademyInstagram] = useState([
-    {img:"/images/home-img-03.jpg", href:"#"},
-    {img:"/images/home-img-02.jpg", href:"#"},
-    // {img:"/images/home-img-01.jpg", href:"#"},
-    // {img:"/images/home-img-03.jpg", href:"#"},
+    {img:"/images/index/home-img-03.jpg", href:"#"},
+    {img:"/images/index/home-img-02.jpg", href:"#"},
+    // {img:"/images/index/home-img-01.jpg", href:"#"},
+    // {img:"/images/index/home-img-03.jpg", href:"#"},
   ]);
-
-  
 
   return (
     <Layout>
       <div className="w-full flex justify-center" style={{background:"#181818"}}>
-        <img className="w-full" style={{maxWidth:"1440px"}} src="./images/home-img-00.jpg"></img>
+        <img className="w-full" style={{maxWidth:"1440px"}} src="./images/index/home-img-00.jpg"></img>
       </div>
       <HeroSection >
         <div className={styles.home__card_reverse}>
@@ -42,7 +40,7 @@ export default function Home({instagramPosts}) {
             </button>
           </div>
           <div className={styles.home__card_img}>
-            <img src="./images/home-img-01.jpg"></img>
+            <img src="./images/index/home-img-01.jpg"></img>
           </div>
 
           <div className={styles.home__card_content}>
@@ -76,7 +74,7 @@ export default function Home({instagramPosts}) {
             </button>
           </div>
           <div className={styles.home__card_img}>
-            <img src="./images/home-img-02.jpg"></img>
+            <img src="./images/index/home-img-02.jpg"></img>
           </div>
           <div className={styles.home__card_content}>
            <div className={styles.content_title}>
@@ -112,7 +110,7 @@ export default function Home({instagramPosts}) {
             {/* <p><strong style={{color:'#fff'}}>SNS</strong> on GOYANG BULLS</p> */}
             <div className="flex justify-center items-center" >
               <i className="fab fa-instagram" style={{fontSize:"3.5rem"}}></i>
-              <img src="/images/Instagram_Logo_Large.png" className="mt-2 ml-3 w-28" style={{width:"11rem"}} />
+              <img src="/images/index/Instagram_Logo_Large.png" className="mt-2 ml-3 w-28" style={{width:"11rem"}} />
             </div>
           </div>
 
@@ -165,18 +163,15 @@ export default function Home({instagramPosts}) {
         </div>
       </HeroSection>
 
-      <HeroSection>
+      <HeroSection> 
         <div className={styles.home__sponsor_group} style={{margin:"1rem"}}>
-          <img className={styles.home__sponsor_img} src="/images/goyangsi_logo.jpg" />
-          <img className={styles.home__sponsor_img} src="/images/tikixaka_logo.png" />
-          <img className={styles.home__sponsor_img} src="/images/filder_img.png" />
-          <img className={styles.home__sponsor_img} src="/images/joma_logo.png" />
-          <img className={styles.home__sponsor_img} style={{width:"8%"}} src="/images/goyangsoccer_logo.png" />
+          <img className={styles.home__sponsor_img} src="/images/index/goyangsi_logo.jpg" />
+          <img className={styles.home__sponsor_img} src="/images/index/tikixaka_logo.png" />
+          <img className={styles.home__sponsor_img} src="/images/index/filder_img.png" />
+          <img className={styles.home__sponsor_img} src="/images/index/joma_logo.png" />
+          <img className={styles.home__sponsor_img} style={{width:"8%"}} src="/images/index/goyangsoccer_logo.png" />
         </div>
       </HeroSection>
-
-
-
     </Layout>
   )
 }

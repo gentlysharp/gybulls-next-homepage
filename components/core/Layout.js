@@ -2,6 +2,9 @@ import React from 'react'
 import Head from 'next/head'
 import Footer from './Footer'
 import Header from './Header'
+import HeroSection from '../section/HeroSection'
+
+import styles from '../../styles/Home.module.css'
 
 export default function Layout({title,children}) {
   return (
