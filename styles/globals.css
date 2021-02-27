@@ -23,6 +23,15 @@
   --outter-line:#b6b6b6;
 }
 
+
+.horizontal_line {
+  width:96%;
+  padding:2px;
+  margin: 0 0 2rem 1rem;
+  background: #d6d6d6;
+  opacity: 0.5;
+}
+
 /* .hero_section {
   margin: auto;
   width : 100%;
@@ -48,3 +57,4 @@
 .conteiner img {
   width: 450px;
 } */
+

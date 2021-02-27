@@ -1,10 +1,10 @@
-.img_group {
+.roster__img_group {
   display: flex;
   flex-direction:column;
   margin: 1.5rem 0;
 }
 
-.img_group h3 {
+.roster__img_group h3 {
   margin-left: 1rem;
   padding: 0.3rem 0.5rem;
   background: #000;
@@ -18,7 +18,7 @@
   z-index: 1; 
 }
 
-.img_group_title_panel {
+.roster__img_group_title_panel {
   position: absolute;
   top: 0;
   left: 0;
@@ -31,24 +31,17 @@
   
 }
 
-.img_card {
+.roster__img_card {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   column-gap: 1.5rem;
   margin-right:1rem;
 }
 
-.img_card img {
+.roster__img_card img {
   margin: 1rem;
   width:260px;
   border: 1px solid #000;
   border-radius: 20px 0 20px 0;
 }
 
-.horizontal_line {
-  width:96%;
-  padding:2px;
-  margin: 0 0 2rem 1rem;
-  background: #d6d6d6;
-  opacity: 0.5;
-}

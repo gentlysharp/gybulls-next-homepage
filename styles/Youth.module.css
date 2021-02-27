@@ -1,0 +1,69 @@
+.youth__img_card {
+  position: relative;
+}
+
+.youth__img_card_reverse {
+  position: relative;
+}
+
+.youth__img_card img {
+  width: 600px;
+}
+
+.youth__img_card_panel{
+  position: absolute;
+  top: 0%;
+  left: 70%;
+  width: 250px;
+  height: 100%;
+  background: var(--bulls-yellow);
+  transform: skew(20deg) translate(30%);
+  /* border-right: 0.8rem solid var(--bulls-yellow); */
+}
+
+.youth__img_card_reverse .youth__img_card_panel{
+  position: absolute;
+  top: 0%;
+  left:-36.5%;
+  width: 250px;
+  height: 100%;
+  background: var(--bulls-yellow);
+  transform: skew(-20deg) translate(30%);
+}
+
+.youth__img_card_description {
+  width: 650px;
+  position: absolute;
+  top: 10%;
+  left: 90%;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.youth__img_card_reverse.youth__img_card_description{
+  left: 90%;
+}
+
+
+.youth__img_card_description h3 {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.youth__img_card_description p{
+  font-size: 25px;
+  text-align: left;
+}
+
+.youth__img_card_description_reverse {
+  width: 650px;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

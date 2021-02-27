@@ -52,9 +52,9 @@ export default function roster() {
       <br></br>
 
       <HeroSection>
-        <div className={roster__styles.img_group}>
-          <h3>FIXO <div className={roster__styles.img_group_title_panel}></div></h3>
-          <div className={roster__styles.img_card}>
+        <div className={roster__styles.roster__img_group}>
+          <h3>FIXO <div className={roster__styles.roster__img_group_title_panel}></div></h3>
+          <div className={roster__styles.roster__img_card}>
           {
             fixos.map((fixo,i) => {
               return(
@@ -69,10 +69,10 @@ export default function roster() {
       </HeroSection>
 
       <HeroSection>
-        <div className={roster__styles.img_group} >
+        <div className={roster__styles.roster__img_group} >
           <hr className={roster__styles.horizontal_line}></hr>
-          <h3>PIVO <div className={roster__styles.img_group_title_panel}></div></h3>
-          <div className={roster__styles.img_card}>
+          <h3>PIVO <div className={roster__styles.roster__img_group_title_panel}></div></h3>
+          <div className={roster__styles.roster__img_card}>
           {
             pivos.map((pivo,i) => {
               return(
@@ -87,10 +87,10 @@ export default function roster() {
       </HeroSection>
 
       <HeroSection >
-        <div className={roster__styles.img_group}>
+        <div className={roster__styles.roster__img_group}>
         <hr className={roster__styles.horizontal_line}></hr>
-          <h3>ALA <div className={roster__styles.img_group_title_panel}></div></h3>
-          <div className={roster__styles.img_card}>
+          <h3>ALA <div className={roster__styles.roster__img_group_title_panel}></div></h3>
+          <div className={roster__styles.roster__img_card}>
           {
             alas.map((ala,i) => {
               return(
@@ -108,10 +108,10 @@ export default function roster() {
 
       <HeroSection>
         
-        <div className={roster__styles.img_group}>
+        <div className={roster__styles.roster__img_group}>
         <hr className={roster__styles.horizontal_line}></hr>
-          <h3>GOLEIRO<div className={roster__styles.img_group_title_panel}></div></h3>
-          <div className={roster__styles.img_card}>
+          <h3>GOLEIRO<div className={roster__styles.roster__img_group_title_panel}></div></h3>
+          <div className={roster__styles.roster__img_card}>
           {
             goleiros.map((gole,i) => {
               return(
