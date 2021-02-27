@@ -4,6 +4,25 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --bulls-accent-green:#2fa349;
+  --bulls-light-green:#86dc77;
+  --bulls-mint:#d6f5d0;
+  --bulls-ocean-blue: #bbeae5;
+  --bulls-accent-ocean-blue: #7ed4cb;
+  --bulls-yellow:rgba(255, 229, 0, 0.7);
+  --bulls-light-yellow: #fff7d6;
+  --bulls-orange:#ffa200;
+  --bulls-bg-color: #f4f7f0;
+  --bulls-black: #2a2627;
+  --bulls-grey: #bdbdbd;
+  --bulls-accent-grey: #666666;
+  --bulls-light-grey: #f8f8f8;
+  
+  --inner-line:#e0e0e0;
+  --outter-line:#b6b6b6;
+}
+
 /* .hero_section {
   margin: auto;
   width : 100%;

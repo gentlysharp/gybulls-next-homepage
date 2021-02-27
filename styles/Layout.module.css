@@ -6,14 +6,14 @@
 
 .header__logo_wrap{
   position:absolute;
-  top: 10;
+  top: 0;
   left: 50%;
-  transform: translate(-40%,50%);
+  transform: translate(-40%,30%);
 }
 
 .header__logo {
-  width: 80px;
-  height:80px;
+  width: 100px;
+  height:100px;
 }
 
 .header__upper_nav {
