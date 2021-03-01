@@ -1,27 +1,35 @@
 .youth__img_card {
   position: relative;
+  background-color: chocolate;
+  width: 50%;
+  height: 100%;
+  min-height: 500px;
 }
 
 .youth__img_card_reverse {
   position: relative;
+  width: 50%;
+  height: 100%;
+  min-height: 500px;
 }
 
 .youth__img_card img {
-  width: 600px;
+  width: 100%;
 }
 
 .youth__img_card_panel{
   position: absolute;
   top: 0%;
-  left: 70%;
-  width: 250px;
+  left: 45%;
+  /* width는 inner style 요소로 사용한다. */
+  width: 17vw;
   height: 100%;
   background: var(--bulls-yellow);
   transform: skew(20deg) translate(30%);
-  /* border-right: 0.8rem solid var(--bulls-yellow); */
+  /* border-right: 10rem solid #fff;  */
 }
 
-.youth__img_card_reverse .youth__img_card_panel{
+/* .youth__img_card_reverse .youth__img_card_panel{
   position: absolute;
   top: 0%;
   left:-36.5%;
@@ -29,31 +37,36 @@
   height: 100%;
   background: var(--bulls-yellow);
   transform: skew(-20deg) translate(30%);
-}
+} */
 
 .youth__img_card_description {
-  width: 650px;
-  position: absolute;
-  top: 10%;
-  left: 90%;
+  width: 50%;
   display:flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.youth__img_card_reverse.youth__img_card_description{
-  left: 90%;
+.youth__img_card_text {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width:600px;
+  z-index:1 !important;
 }
 
+/* .youth__img_card_reverse.youth__img_card_description{
+  left: 90%;
+} */
 
 .youth__img_card_description h3 {
-  font-size: 40px;
+  font-size: 2vw;
   font-weight: bold;
 }
 
 .youth__img_card_description p{
-  font-size: 25px;
+  font-size: 1.5vw;
   text-align: left;
 }
 
