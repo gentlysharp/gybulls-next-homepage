@@ -46,10 +46,20 @@ export default function Header() {
          &&  <div className={styles.header__sm_dropdown}>
               <ul>
                 {
-                  menus.map((menu,i) => 
-                    <li key={"menu" + i} className={styles.header__dropdown_menu}>
-                      <Link href={menu.path}>{menu.title}</Link>
-                    </li>
+                  menus.map((menu,i) => {
+                    if(menu.title === "logo"){
+                        <li key={"menu" + i} className={styles.header__dropdown_menu_logo}>
+                          <Link href={menu.path}>{menu.title}</Link>
+                        </li>
+                    } else {
+                      return (
+                        <li key={"menu" + i} className={styles.header__dropdown_menu}>
+                          <Link href={menu.path}>{menu.title}</Link>
+                        </li>
+                      )
+                    }
+                  }
+                    
                   )
                 }
               </ul>

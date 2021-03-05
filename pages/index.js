@@ -25,7 +25,7 @@ export default function Home({instagramPosts}) {
   ]);
 
   return (
-    <Layout>
+    <Layout title="고양불스 홈페이지">
       <div className="w-full flex justify-center" style={{background:"#181818"}}>
         <img className="w-full" style={{maxWidth:"1440px"}} src="./images/index/home-img-00.jpg"></img>
       </div>
@@ -163,15 +163,6 @@ export default function Home({instagramPosts}) {
         </div>
       </HeroSection>
 
-      <HeroSection> 
-        <div className={styles.home__sponsor_group} style={{margin:"1rem"}}>
-          <img className={styles.home__sponsor_img} src="/images/index/goyangsi_logo.jpg" />
-          <img className={styles.home__sponsor_img} src="/images/index/tikixaka_logo.png" />
-          <img className={styles.home__sponsor_img} src="/images/index/filder_img.png" />
-          <img className={styles.home__sponsor_img} src="/images/index/joma_logo.png" />
-          <img className={styles.home__sponsor_img} style={{width:"8%"}} src="/images/index/goyangsoccer_logo.png" />
-        </div>
-      </HeroSection>
     </Layout>
   )
 }

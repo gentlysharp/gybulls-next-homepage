@@ -131,15 +131,7 @@ export default function roster() {
       <br></br>
       <br></br>
       <br></br>
-      <HeroSection> 
-        <div className={home__styles.home__sponsor_group} style={{margin:"1rem"}}>
-          <img className={home__styles.home__sponsor_img} src="/images/index/goyangsi_logo.jpg" />
-          <img className={home__styles.home__sponsor_img} src="/images/index/tikixaka_logo.png" />
-          <img className={home__styles.home__sponsor_img} src="/images/index/filder_img.png" />
-          <img className={home__styles.home__sponsor_img} src="/images/index/joma_logo.png" />
-          <img className={home__styles.home__sponsor_img} style={{width:"8%"}} src="/images/index/goyangsoccer_logo.png" />
-        </div>
-      </HeroSection>
+    
     </Layout>
 
   )
