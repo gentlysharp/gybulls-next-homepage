@@ -41,7 +41,6 @@ export default function roster() {
     <Layout>
       <br></br>
       <br></br>
-      <br></br>
   
       <HeroSection>
         <div className={home__styles.content_title} style={{borderBottom:"3px solid #181818"}}>

@@ -1,15 +1,17 @@
 .roster__img_group {
   display: flex;
   flex-direction:column;
-  margin: 1.5rem 0;
+  margin: 0 0 2rem 0;
 }
 
 .roster__img_group h3 {
   margin-left: 1rem;
+  margin-top: 1rem;
   padding: 0.3rem 0.5rem;
   background: #000;
   color: var(--bulls-yellow);
   width: 8rem;
+  height: 2em;
   font-size: 20px;
   font-weight: bold;
   position:relative;
@@ -45,3 +47,20 @@
   border-radius: 20px 0 20px 0;
 }
 
+@media screen and (max-width: 639px) { 
+
+  .roster__img_card {
+    display:flex;
+    flex-direction: column;
+  }
+
+  .roster__img_group{
+    margin: 0;
+  }
+
+  .roster__img_group h3 {
+    width: 11rem;
+    margin-top: 2rem;
+    font-size: 30px;
+  }
+}
