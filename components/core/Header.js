@@ -1,11 +1,16 @@
 import React from 'react'
 import Link from 'next/link'
-import {useState} from 'react'
+import {useState,useCallback} from 'react'
 import styles from '../../styles/Layout.module.css'
 
 export default function Header() {
 
-  const [toggle, setToggle ] = useState(false);
+  // toggle ? 메뉴 열기 : 메뉴 닫기 
+  const [toggle, setToggle ] = useState(true)
+
+  const handleClickMemu = useCallback(()=> {
+      setToggle(false);
+  },[toggle])
 
   const [menus,setMenus] = useState([
       { title:"ROSTER", path:"/roster", subMenus:[] },
@@ -25,13 +30,9 @@ export default function Header() {
     { href:"#", name:"fab fa-instagram" },
   ])
 
-  const toggleMenu = () => {
-    setToggle(!toggle);
-  }
-
   return (
     <header className={styles.header}>
-      <div className={styles.header__sm_btn} onClick={() => toggleMenu()}>
+      <div className={styles.header__sm_btn} onClick={() => setToggle(!toggle)}>
         { toggle 
           ? <div>
               <i className="fas fa-bars"></i>
@@ -53,14 +54,16 @@ export default function Header() {
                         </li>
                     } else {
                       return (
-                        <li key={"menu" + i} className={styles.header__dropdown_menu}>
+                        <li 
+                          key={"menu" + i} 
+                          className={styles.header__dropdown_menu}
+                          onClick={() => handleClickMemu()}
+                        >
                           <Link href={menu.path}>{menu.title}</Link>
                         </li>
                       )
                     }
-                  }
-                    
-                  )
+                  })
                 }
               </ul>
       
@@ -83,7 +86,10 @@ export default function Header() {
             </div>
       }
 
-      <div className={styles.header__logo_wrap}>
+      <div 
+        className={styles.header__logo_wrap} 
+        onClick={() => handleClickMemu()}
+      >
         <Link href="/">
           <a href="/">
             <img className={styles.header__logo} src="/images/index/logo.png"></img>

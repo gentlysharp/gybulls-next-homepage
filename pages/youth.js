@@ -10,7 +10,6 @@ export default function youth() {
     <Layout>
       <br></br>
       <br></br>
-      <br></br>
 
       <HeroSection>
         <div className={home__styles.content_title} style={{borderBottom:"3px solid #181818"}}>
@@ -103,13 +102,10 @@ export default function youth() {
         <div className={youth__styles.youth__img_card_description}>
             <div className={youth__styles.youth__img_card_text}>
               <h3>교 육 철 학</h3>
-              <br></br>
               <p>축구와 풋살 경기에서 유소년이 경험하는 즐거움이</p>
               <p>축구를 계속하게 만드는 원동력이 된다는 점을 유념. </p>
-              <br></br>
               <p>도전과 실수를 허용하는 분위기에서</p>
               <p>개인의 볼터치를 늘리고 기술향상을 목표.</p>
-              <br></br>
               <p>스포츠 뿐만 아니라 모든 면에서 스스로 판단하고</p>
               <p>책임을 질 줄 아는 용기를 가진 학생으로 육성.</p>
             </div>
