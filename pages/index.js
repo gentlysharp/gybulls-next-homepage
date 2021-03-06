@@ -1,4 +1,4 @@
-// import Instagram from "instagram-web-api"
+import Instagram from "instagram-web-api"
 
 import Head from 'next/head'
 import Layout from '../components/core/Layout'
@@ -8,24 +8,8 @@ import {useState} from 'react'
 
 export default function Home({instagramPosts}) {
 
-  console.log("",instagramPosts);
-
-  const [bullsInstagram,setBullsInstagram] = useState([
-    {img:"/images/index/home-img-03.jpg", href:"#"},
-    {img:"/images/index/home-img-02.jpg", href:"#"},
-    // {img:"/images/index/home-img-01.jpg", href:"#"},
-    // {img:"/images/index/home-img-03.jpg", href:"#"},
-  ]);
-
-  const [academyInstagram,setAcademyInstagram] = useState([
-    {img:"/images/index/home-img-03.jpg", href:"#"},
-    {img:"/images/index/home-img-02.jpg", href:"#"},
-    // {img:"/images/index/home-img-01.jpg", href:"#"},
-    // {img:"/images/index/home-img-03.jpg", href:"#"},
-  ]);
-
   return (
-    <Layout title="고양불스 홈페이지">
+    <Layout title="고양불스">
       <div className="w-full flex justify-center" style={{background:"#181818"}}>
         <img className="w-full" style={{maxWidth:"1440px"}} src="./images/index/home-img-00.jpg"></img>
       </div>
@@ -117,15 +101,20 @@ export default function Home({instagramPosts}) {
           <div className={styles.home__sns_card_group}>
               <div className={styles.home__sns_card_group_title}>#goyang_bulls_official</div>
               <ul className={styles.home__sns_card_group}>
-                {bullsInstagram.map((insta,i) => 
+                {([instagramPosts[0],instagramPosts[1]]).map((insta,i) => 
                   <li 
                     key={"bulls" + i}
                     className="m-2"
                   >
-                    <a href={insta.href}>
+                    {/* https://www.instagram.com/p/`${instagramPosts[0].shortcode}`/ */}
+                    {/* <a href={insta.href}> */}
+                    <a  
+                      href={`https://www.instagram.com/p/${insta.node.shortcode}/`} 
+                      target="_black"
+                    >
                       <img 
                         className={styles.home__sns_card}
-                        src={insta.img}
+                        src={insta.node.thumbnail_src}
                       />
                     </a>
                   </li>
@@ -134,16 +123,19 @@ export default function Home({instagramPosts}) {
             
           
             <ul className={styles.home__sns_card_group}>
-              <div className={styles.home__sns_card_group_title}>#goyang_bulls_academy</div>
-              {academyInstagram.map((insta,i) => 
+              {/* <div className={styles.home__sns_card_group_title}>#goyang_bulls_academy</div> */}
+              {([instagramPosts[2],instagramPosts[3]]).map((insta,i) => 
                 <li 
                   key={"academy" + i}
                   className="m-2 "
                 >
-                  <a href={insta.href}>
+                  <a 
+                    href={`https://www.instagram.com/p/${insta.node.shortcode}/`} 
+                    target="_black"
+                  >
                     <img 
                       className={styles.home__sns_card}
-                      src={insta.img}
+                      src={insta.node.thumbnail_src}
                     />
                   </a>
                 </li>
@@ -159,44 +151,40 @@ export default function Home({instagramPosts}) {
 
 //https://www.aboutmonica.com/blog/adding-instagram-timeline-to-next-js-site
 
-// export async function getStaticProps(context) {
+export async function getStaticProps(context) {
 
-//   // set account
-//   const client = new Instagram({
-//     username:process.env.IG_USERNAME,
-//     password:process.env.IG_PASSWORD
-//   })
+  // set account
+  const client = new Instagram({
+    username:process.env.IG_USERNAME,
+    password:process.env.IG_PASSWORD
+  })
 
-//   // console.log("client:=======",client);
-//   // set posts to an empty array as a placeholder
-//   let posts = []
-//   try {
+  // set posts to an empty array as a placeholder
+  let posts = []
+  try {
 
-//     await client.login()
-//     console.log(await client.getHome());
+    const instagram = await client.getPhotosByUsername({
+      username: process.env.IG_USERNAME,
+    })
 
-//     // const instagram = await client.getPhotosByUsername({
-//     //   username: process.env.IG_USERNAME,
-//     // })
+    if (instagram["user"]["edge_owner_to_timeline_media"]["count"] > 0) {
+      // if we receive timeline data back
+      //  update the posts to be equal
+      // to the edges that were returned from the instagram API response
+      posts = instagram["user"]["edge_owner_to_timeline_media"]["edges"]
+    }
 
-//     // if (instagram["user"]["edge_owner_to_timeline_media"]["count"] > 0) {
-//     //   // if we receive timeline data back
-//     //   //  update the posts to be equal
-//     //   // to the edges that were returned from the instagram API response
-//     //   posts = instagram["user"]["edge_owner_to_timeline_media"]["edges"]
-//     // }
+    posts = response.user.edge_owner_to_timeline_media.edges
 
-//     // posts = response.user.edge_owner_to_timeline_media.edges
+  } catch(err) {
+    console.log("Something went wrong while logging into Instagram", err);
+  }
 
-//   } catch(err) {
-//     console.log("Something went wrong while logging into Instagram", err);
-//   }
-
-//   return {
-//     props: {
-//       // return the posts as the prop instagramPosts
-//       // for the Index function to use
-//       instagramPosts: posts,
-//     },
-//   }
-// }
+  return {
+    props: {
+      // return the posts as the prop instagramPosts
+      // for the Index function to use
+      instagramPosts: posts,
+    },
+  }
+}
