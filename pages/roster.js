@@ -38,7 +38,7 @@ export default function roster() {
 
 
   return (
-    <Layout>
+    <Layout title="고양불스 선수단">
       <br></br>
       <br></br>
   
@@ -100,13 +100,10 @@ export default function roster() {
             })
           }
           </div>
-          
         </div>
-        
       </HeroSection>
 
       <HeroSection>
-        
         <div className={roster__styles.roster__img_group}>
         <hr className={roster__styles.horizontal_line}></hr>
           <h3>GOLEIRO<div className={roster__styles.roster__img_group_title_panel}></div></h3>
@@ -121,9 +118,7 @@ export default function roster() {
             })
           }
           </div>
-          
         </div>
-        
       </HeroSection>
       
       <br></br>

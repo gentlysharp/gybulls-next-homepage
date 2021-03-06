@@ -7,7 +7,7 @@ import home__styles from '../styles/Home.module.css'
 
 export default function youth() {
   return (
-    <Layout>
+    <Layout title="고양불스 유소년 아카데미">
       <br></br>
       <br></br>
 
