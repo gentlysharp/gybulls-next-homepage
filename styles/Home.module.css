@@ -18,7 +18,7 @@
   text-align: center;
   font-size: 50px;
   font-weight: bold;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .content_title strong {
@@ -189,7 +189,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin:0 1rem;
+  margin: 0 1rem;
+  position: relative;
+}
+
+.home__sns_card_group_title {
+  position: absolute;
+  top: -8%;
+  left: 5%;
+
 }
 
 .home__sns_card {
@@ -258,7 +266,7 @@
     justify-content: center;
     align-items: center;
   }
-
+  
   .home__sns_card {
     width: 200px;
     height: 200px;

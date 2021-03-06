@@ -1,4 +1,4 @@
-import Instagram from "instagram-web-api"
+// import Instagram from "instagram-web-api"
 
 import Head from 'next/head'
 import Layout from '../components/core/Layout'
@@ -114,19 +114,8 @@ export default function Home({instagramPosts}) {
             </div>
           </div>
 
-          <div style={{
-              marginLeft:"3rem",
-              display:"flex", justifyContent:"space-between" ,
-              width:"50rem",
-              fontSize:"1.5rem"
-            }}
-          >
-            <div>#goyang_bulls_official</div>
-            <div>#goyang_bulls_academy</div>
-          </div>
-    
           <div className={styles.home__sns_card_group}>
-            
+              <div className={styles.home__sns_card_group_title}>#goyang_bulls_official</div>
               <ul className={styles.home__sns_card_group}>
                 {bullsInstagram.map((insta,i) => 
                   <li 
@@ -145,6 +134,7 @@ export default function Home({instagramPosts}) {
             
           
             <ul className={styles.home__sns_card_group}>
+              <div className={styles.home__sns_card_group_title}>#goyang_bulls_academy</div>
               {academyInstagram.map((insta,i) => 
                 <li 
                   key={"academy" + i}
@@ -169,44 +159,44 @@ export default function Home({instagramPosts}) {
 
 //https://www.aboutmonica.com/blog/adding-instagram-timeline-to-next-js-site
 
-export async function getStaticProps(context) {
+// export async function getStaticProps(context) {
 
-  // set account
-  const client = new Instagram({
-    username:process.env.IG_USERNAME,
-    password:process.env.IG_PASSWORD
-  })
+//   // set account
+//   const client = new Instagram({
+//     username:process.env.IG_USERNAME,
+//     password:process.env.IG_PASSWORD
+//   })
 
-  console.log("client:=======",client);
-  // set posts to an empty array as a placeholder
-  let posts = []
-  try {
+//   // console.log("client:=======",client);
+//   // set posts to an empty array as a placeholder
+//   let posts = []
+//   try {
 
-    await client.login()
-    console.log(await client.getHome());
+//     await client.login()
+//     console.log(await client.getHome());
 
-    // const instagram = await client.getPhotosByUsername({
-    //   username: process.env.IG_USERNAME,
-    // })
+//     // const instagram = await client.getPhotosByUsername({
+//     //   username: process.env.IG_USERNAME,
+//     // })
 
-    // if (instagram["user"]["edge_owner_to_timeline_media"]["count"] > 0) {
-    //   // if we receive timeline data back
-    //   //  update the posts to be equal
-    //   // to the edges that were returned from the instagram API response
-    //   posts = instagram["user"]["edge_owner_to_timeline_media"]["edges"]
-    // }
+//     // if (instagram["user"]["edge_owner_to_timeline_media"]["count"] > 0) {
+//     //   // if we receive timeline data back
+//     //   //  update the posts to be equal
+//     //   // to the edges that were returned from the instagram API response
+//     //   posts = instagram["user"]["edge_owner_to_timeline_media"]["edges"]
+//     // }
 
-    // posts = response.user.edge_owner_to_timeline_media.edges
+//     // posts = response.user.edge_owner_to_timeline_media.edges
 
-  } catch(err) {
-    console.log("Something went wrong while logging into Instagram", err);
-  }
+//   } catch(err) {
+//     console.log("Something went wrong while logging into Instagram", err);
+//   }
 
-  return {
-    props: {
-      // return the posts as the prop instagramPosts
-      // for the Index function to use
-      instagramPosts: posts,
-    },
-  }
-}
+//   return {
+//     props: {
+//       // return the posts as the prop instagramPosts
+//       // for the Index function to use
+//       instagramPosts: posts,
+//     },
+//   }
+// }

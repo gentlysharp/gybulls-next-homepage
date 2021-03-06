@@ -11,6 +11,16 @@ export default function youth() {
       <br></br>
       <br></br>
       <br></br>
+
+      <HeroSection>
+        <div className={home__styles.content_title} style={{borderBottom:"3px solid #181818"}}>
+          <p><strong style={{color:'#ffe500'}}>YOUTH </strong>ACADEMY</p>
+        </div>
+      </HeroSection>
+      <br></br>
+      <br></br>
+      <br></br>
+
       <HeroSection >
         <div 
           className={youth__styles.youth__img_card} 

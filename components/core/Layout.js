@@ -24,7 +24,7 @@ export default function Layout({title,children}) {
           <img className={styles.home__sponsor_img} src="/images/index/tikixaka_logo.png" />
           <img className={styles.home__sponsor_img} src="/images/index/filder_img.png" />
           <img className={styles.home__sponsor_img} src="/images/index/joma_logo.png" />
-          <img className={styles.home__sponsor_img} style={{width:"8%"}} src="/images/index/goyangsoccer_logo.png" />
+          <img className={styles.home__sponsor_img} style={{width:"8%", minWidth:"140px"}} src="/images/index/goyangsoccer_logo.png" />
         </div>
       </HeroSection>
       <Footer />
