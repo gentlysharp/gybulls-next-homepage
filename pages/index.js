@@ -1,10 +1,10 @@
-import Instagram from "instagram-web-api"
+// import Instagram from "instagram-web-api"
 
 import Head from 'next/head'
 import Layout from '../components/core/Layout'
 import HeroSection from '../components/section/HeroSection'
 import styles from '../styles/Home.module.css'
-import {useState} from 'react'
+// import {useState} from 'react'
 
 export default function Home({instagramPosts}) {
 
@@ -88,10 +88,9 @@ export default function Home({instagramPosts}) {
         </div>
       </HeroSection>
 
-      <HeroSection style={{background:'rgba(255, 229, 0, 0.7)'}}>
+      {/* <HeroSection style={{background:'rgba(255, 229, 0, 0.7)'}}>
         <div className="flex flex-col m-10">
           <div className={styles.content_title}>
-            {/* <p><strong style={{color:'#fff'}}>SNS</strong> on GOYANG BULLS</p> */}
             <div className="flex justify-center items-center" >
               <i className="fab fa-instagram" style={{fontSize:"3.5rem"}}></i>
               <img src="/images/index/Instagram_Logo_Large.png" className="mt-2 ml-3 w-28" style={{width:"11rem"}} />
@@ -106,8 +105,6 @@ export default function Home({instagramPosts}) {
                     key={"bulls" + i}
                     className="m-2"
                   >
-                    {/* https://www.instagram.com/p/`${instagramPosts[0].shortcode}`/ */}
-                    {/* <a href={insta.href}> */}
                     <a  
                       href={`https://www.instagram.com/p/${insta.node.shortcode}/`} 
                       target="_black"
@@ -123,7 +120,6 @@ export default function Home({instagramPosts}) {
             
           
             <ul className={styles.home__sns_card_group}>
-              {/* <div className={styles.home__sns_card_group_title}>#goyang_bulls_academy</div> */}
               {([instagramPosts[2],instagramPosts[3]]).map((insta,i) => 
                 <li 
                   key={"academy" + i}
@@ -143,7 +139,7 @@ export default function Home({instagramPosts}) {
             </ul>
           </div>
         </div>
-      </HeroSection>
+      </HeroSection> */}
 
     </Layout>
   )
@@ -151,40 +147,40 @@ export default function Home({instagramPosts}) {
 
 //https://www.aboutmonica.com/blog/adding-instagram-timeline-to-next-js-site
 
-export async function getStaticProps(context) {
+// export async function getStaticProps(context) {
 
-  // set account
-  const client = new Instagram({
-    username:process.env.IG_USERNAME,
-    password:process.env.IG_PASSWORD
-  })
+//   // set account
+//   const client = new Instagram({
+//     username:process.env.IG_USERNAME,
+//     password:process.env.IG_PASSWORD
+//   })
 
-  // set posts to an empty array as a placeholder
-  let posts = []
-  try {
+//   // set posts to an empty array as a placeholder
+//   let posts = []
+//   try {
 
-    const instagram = await client.getPhotosByUsername({
-      username: process.env.IG_USERNAME,
-    })
+//     const instagram = await client.getPhotosByUsername({
+//       username: process.env.IG_USERNAME,
+//     })
 
-    if (instagram["user"]["edge_owner_to_timeline_media"]["count"] > 0) {
-      // if we receive timeline data back
-      //  update the posts to be equal
-      // to the edges that were returned from the instagram API response
-      posts = instagram["user"]["edge_owner_to_timeline_media"]["edges"]
-    }
+//     if (instagram["user"]["edge_owner_to_timeline_media"]["count"] > 0) {
+//       // if we receive timeline data back
+//       //  update the posts to be equal
+//       // to the edges that were returned from the instagram API response
+//       posts = instagram["user"]["edge_owner_to_timeline_media"]["edges"]
+//     }
 
-    posts = response.user.edge_owner_to_timeline_media.edges
+//     posts = response.user.edge_owner_to_timeline_media.edges
 
-  } catch(err) {
-    console.log("Something went wrong while logging into Instagram", err);
-  }
+//   } catch(err) {
+//     console.log("Something went wrong while logging into Instagram", err);
+//   }
 
-  return {
-    props: {
-      // return the posts as the prop instagramPosts
-      // for the Index function to use
-      instagramPosts: posts,
-    },
-  }
-}
+//   return {
+//     props: {
+//       // return the posts as the prop instagramPosts
+//       // for the Index function to use
+//       instagramPosts: posts,
+//     },
+//   }
+// }
