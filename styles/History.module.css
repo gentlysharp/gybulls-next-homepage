@@ -81,27 +81,31 @@
 
   .history__img_card {
     position: relative;
+    width: 100vw;
+    height: 80vw;
+    max-width: 500px;
   }
 
   .history__discription_card {
     position: absolute;
-    top: -40%;
+    top: -100px;
     /* left: 15%; */
     /* width: 70%; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 55vw;
   }
   
   .history__discription_card h3 {
-    width: 98%;
+    width: 100%;
     font-size: 20px;
     font-weight: bold; 
   }
   
   .history__discription_card p{
-    width: 98%;
+    width: 100%;
     font-size: 12px;
     word-spacing: -2px;
   }
