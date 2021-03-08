@@ -1,4 +1,4 @@
-import Instagram from "instagram-web-api"
+// import Instagram from "instagram-web-api"
 
 import Head from 'next/head'
 import Layout from '../components/core/Layout'
@@ -88,7 +88,7 @@ export default function Home({instagramPosts}) {
         </div>
       </HeroSection>
 
-      <HeroSection style={{background:'rgba(255, 229, 0, 0.7)'}}>
+      {/* <HeroSection style={{background:'rgba(255, 229, 0, 0.7)'}}>
         <div className="flex flex-col m-10">
           <div className={styles.content_title}>
             <div className="flex justify-center items-center" >
@@ -139,50 +139,48 @@ export default function Home({instagramPosts}) {
             </ul>
           </div>
         </div>
-      </HeroSection>
+      </HeroSection> */}
 
     </Layout>
   )
 }
 
-// https://www.aboutmonica.com/blog/adding-instagram-timeline-to-next-js-site
+//https://www.aboutmonica.com/blog/adding-instagram-timeline-to-next-js-site
 
-export async function getStaticProps(context) {
+// export async function getStaticProps(context) {
 
-  // set account
-  const client = new Instagram({
-    username:process.env.IG_USERNAME,
-    password:process.env.IG_PASSWORD
-  })
+//   // set account
+//   const client = new Instagram({
+//     username:process.env.IG_USERNAME,
+//     password:process.env.IG_PASSWORD
+//   })
 
-  // set posts to an empty array as a placeholder
-  let posts = []
-  try {
+//   // set posts to an empty array as a placeholder
+//   let posts = []
+//   try {
 
-    const instagram = await client.getPhotosByUsername({
-      username: process.env.IG_USERNAME,
-    })
+//     const instagram = await client.getPhotosByUsername({
+//       username: process.env.IG_USERNAME,
+//     })
 
+//     if (instagram["user"]["edge_owner_to_timeline_media"]["count"] > 0) {
+//       // if we receive timeline data back
+//       //  update the posts to be equal
+//       // to the edges that were returned from the instagram API response
+//       posts = instagram["user"]["edge_owner_to_timeline_media"]["edges"]
+//     }
 
+//     posts = response.user.edge_owner_to_timeline_media.edges
 
-    if (instagram["user"]["edge_owner_to_timeline_media"]["count"] > 0) {
-      // if we receive timeline data back
-      //  update the posts to be equal
-      // to the edges that were returned from the instagram API response
-      posts = instagram["user"]["edge_owner_to_timeline_media"]["edges"]
-    }
+//   } catch(err) {
+//     console.log("Something went wrong while logging into Instagram", err);
+//   }
 
-    posts = response.user.edge_owner_to_timeline_media.edges
-
-  } catch(err) {
-    console.log("Something went wrong while logging into Instagram", err);
-  }
-
-  return {
-    props: {
-      // return the posts as the prop instagramPosts
-      // for the Index function to use
-      instagramPosts: posts,
-    },
-  }
-}
+//   return {
+//     props: {
+//       // return the posts as the prop instagramPosts
+//       // for the Index function to use
+//       instagramPosts: posts,
+//     },
+//   }
+// }
