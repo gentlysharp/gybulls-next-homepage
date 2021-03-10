@@ -88,11 +88,6 @@
     max-width: 500px;
   }
 
-  .history__img_card {
-    max-height: 320px;
-    min-height: 320px;
-  }
-
   .history__img_card_img {
     background-size:cover;
   }
