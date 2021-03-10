@@ -23,6 +23,7 @@ export default function roster() {
 
   // Ala
   const [alas,setAlas] = useState([
+    {src:"/images/players/player-06.png", href:"#"},
     {src:"/images/players/player-07.png", href:"#"},
     {src:"/images/players/player-11.png", href:"#"},
     {src:"/images/players/player-13.png", href:"#"},
@@ -32,8 +33,15 @@ export default function roster() {
 
   // Goleiro
   const [goleiros,setGoleiros] = useState([
+    {src:"/images/players/player-01.png", href:"#"},
     {src:"/images/players/player-18.png", href:"#"},
     {src:"/images/players/player-25.png", href:"#"},
+  ]);
+
+  // Staff
+  const [staffs,setStaffs] = useState([
+    {src:"/images/players/staff-00.png", href:"#"},
+    {src:"/images/players/staff-01.png", href:"#"},
   ]);
 
 
@@ -113,6 +121,24 @@ export default function roster() {
               return(
                 <div key={"gole" + i} >
                   <img src={gole.src} alt="" />
+                </div>
+              )
+            })
+          }
+          </div>
+        </div>
+      </HeroSection>
+
+      <HeroSection>
+        <div className={roster__styles.roster__img_group}>
+        <hr className={roster__styles.horizontal_line}></hr>
+          <h3>STAFF<div className={roster__styles.roster__img_group_title_panel}></div></h3>
+          <div className={roster__styles.roster__img_card}>
+          {
+            staffs.map((staff,i) => {
+              return(
+                <div key={"staff" + i} >
+                  <img src={staff.src} alt="" />
                 </div>
               )
             })
