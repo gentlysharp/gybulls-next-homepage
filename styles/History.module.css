@@ -27,7 +27,8 @@
   height: 40vw;
   min-height: 300px;
   min-width: 400px;
-  max-width: 600px;
+  max-width: 500px;
+  max-height: 401px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -35,8 +36,9 @@
 }
 
 .history__img_card_img {
-  background-size:cover;
+  background-size:contain;
   background-repeat:no-repeat;
+  background-color: var(--bulls-yellow);
   width:100%;
   min-width: 60%;
   min-height:54%;
@@ -84,6 +86,15 @@
     width: 100vw;
     height: 80vw;
     max-width: 500px;
+  }
+
+  .history__img_card {
+    max-height: 320px;
+    min-height: 320px;
+  }
+
+  .history__img_card_img {
+    background-size:cover;
   }
 
   .history__discription_card {
