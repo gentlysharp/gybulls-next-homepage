@@ -10,12 +10,45 @@
   background-size:cover;
   background-repeat:no-repeat;
   width: 50vw;
-  height:40vw;
-
-  min-width: 300px;
-  height: 200px;
-
+  height:500px;
+  min-width: 500px;
   border: 3px solid #181818;
   border-radius: 20px 0 20px 0;
   box-shadow: 6px 8px 5px #ddd;
+}
+
+.stadium__info_card{
+  margin-top: 15px;
+}
+
+.stadium__info_card div {
+  margin-top: 5px;
+  padding:3px;
+  color: #181818;
+  letter-spacing: 0.5;
+  font-size: 20px;
+}
+
+.stadium__info_card i {
+  text-align: center;
+  width: 20px;
+  margin: 5px;
+}
+
+@media screen and (max-width: 639px) { 
+
+  .stadium__img_card{
+    display:flex;
+    flex-direction: column;
+  }
+
+  .stadium__img_card_img {
+    max-width: 320px;
+    min-width: 320px;
+    height: 300px;
+  }
+
+  .stadium__info_card div {
+    font-size: 15px;
+  }
 }
