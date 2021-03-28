@@ -102,7 +102,7 @@ export default function Header() {
         <ul>
           { icons.map((icon,i) => 
             <li key={"icon" + i}>
-              <a>
+              <a target="_blank" href={icon.href}>
                 { icon.name !== "" 
                   ? <button>
                     <i className={icon.name}></i>
