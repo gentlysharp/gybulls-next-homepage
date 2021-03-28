@@ -24,10 +24,10 @@ export default function Header() {
   )
 
   const [icons, setIcons] = useState([
-    { href:"#", name:"fab fa-instagram" },
-    { href:"#", name:"fab fa-facebook-f" },
-    { href:"#", name:"", src:"/images/index/naver_blog.png" },
-    { href:"#", name:"fab fa-instagram" },
+    { href:"https://www.instagram.com/goyang_bulls_official/", name:"fab fa-instagram" },
+    { href:"https://www.facebook.com/goyangbulls/", name:"fab fa-facebook-f" },
+    { href:"https://post.naver.com/my.nhn?memberNo=40877463", name:"", src:"/images/index/naver_blog.png" },
+    // { href:"#", name:"fab fa-instagram" },
   ])
 
   return (
