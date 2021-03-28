@@ -88,14 +88,14 @@ export default function Home({instagramPosts}) {
         </div>
       </HeroSection>
 
-      <HeroSection style={{background:'rgba(255, 229, 0, 0.7)'}}>
+      {/* <HeroSection style={{background:'rgba(255, 229, 0, 0.7)'}}>
         <div className="flex flex-col m-10">
           <div className={styles.content_title}>
             <div className="flex justify-center items-center" >
               <i className="fab fa-instagram" style={{fontSize:"3.5rem"}}></i>
               <img src="/images/index/Instagram_Logo_Large.png" className="mt-2 ml-3 w-28" style={{width:"11rem"}} />
             </div>
-          </div>
+          </div> */}
 
           {/* <div className={styles.home__sns_card_group}>
               <div className={styles.home__sns_card_group_title}>#goyang_bulls_official</div>
@@ -138,8 +138,8 @@ export default function Home({instagramPosts}) {
               )}
             </ul>
           </div> */}
-        </div>
-      </HeroSection>
+        {/* </div>
+      </HeroSection> */}
 
     </Layout>
   )
