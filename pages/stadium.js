@@ -37,7 +37,7 @@ export default function stadium() {
   }, [])
 
   return (
-    <Layout>
+    <Layout title={"누캄프풋살장"}>
    
       <br></br>
       <br></br>

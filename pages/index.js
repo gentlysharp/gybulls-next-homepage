@@ -9,7 +9,7 @@ import styles from '../styles/Home.module.css'
 export default function Home({instagramPosts}) {
 
   return (
-    <Layout title="고양불스">
+    <Layout title="고양불스풋살클럽">
       <div className="w-full flex justify-center" style={{background:"#181818"}}>
         <img className="w-full" style={{maxWidth:"1440px"}} src="./images/index/home-img-00.jpg"></img>
       </div>
@@ -88,7 +88,7 @@ export default function Home({instagramPosts}) {
         </div>
       </HeroSection>
 
-      {/* <HeroSection style={{background:'rgba(255, 229, 0, 0.7)'}}>
+      <HeroSection style={{background:'rgba(255, 229, 0, 0.7)'}}>
         <div className="flex flex-col m-10">
           <div className={styles.content_title}>
             <div className="flex justify-center items-center" >
@@ -97,7 +97,7 @@ export default function Home({instagramPosts}) {
             </div>
           </div>
 
-          <div className={styles.home__sns_card_group}>
+          {/* <div className={styles.home__sns_card_group}>
               <div className={styles.home__sns_card_group_title}>#goyang_bulls_official</div>
               <ul className={styles.home__sns_card_group}>
                 {([instagramPosts[0],instagramPosts[1]]).map((insta,i) => 
@@ -137,15 +137,15 @@ export default function Home({instagramPosts}) {
                 </li>
               )}
             </ul>
-          </div>
+          </div> */}
         </div>
-      </HeroSection> */}
+      </HeroSection>
 
     </Layout>
   )
 }
 
-//https://www.aboutmonica.com/blog/adding-instagram-timeline-to-next-js-site
+// https://www.aboutmonica.com/blog/adding-instagram-timeline-to-next-js-site
 
 // export async function getStaticProps(context) {
 
@@ -162,6 +162,8 @@ export default function Home({instagramPosts}) {
 //     const instagram = await client.getPhotosByUsername({
 //       username: process.env.IG_USERNAME,
 //     })
+
+
 
 //     if (instagram["user"]["edge_owner_to_timeline_media"]["count"] > 0) {
 //       // if we receive timeline data back

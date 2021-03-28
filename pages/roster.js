@@ -46,7 +46,7 @@ export default function roster() {
 
 
   return (
-    <Layout title="고양불스 선수단">
+    <Layout title="고양불스풋살클럽">
       <br></br>
       <br></br>
   

@@ -5,7 +5,7 @@ import home__styles from '../styles/Home.module.css'
 
 export default function shop() {
   return (
-    <Layout>
+    <Layout title="고양불스풋살클럽">
     <br></br>
     <br></br>
     <br></br>

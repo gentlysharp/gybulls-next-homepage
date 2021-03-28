@@ -5,7 +5,7 @@ import home__styles from '../styles/Home.module.css'
 
 export default function academy() {
   return (
-    <Layout>
+    <Layout title="고양불스 아카데미">
     <br></br>
     <br></br>
     <br></br>
